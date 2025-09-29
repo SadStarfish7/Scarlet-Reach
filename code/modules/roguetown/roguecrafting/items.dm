@@ -70,14 +70,14 @@
 	verbage = "unties"
 
 /datum/crafting_recipe/roguetown/survival/rope
-	name = "rope (3 fibers)"
+	name = "rope"
 	result = /obj/item/rope
 	reqs = list(/obj/item/natural/fibers = 3)
 	verbage_simple = "braid"
 	verbage = "braids"
 
 /datum/crafting_recipe/roguetown/survival/rope_leash
-	name = "rope leash (1 rope)"
+	name = "rope leash"
 	result = /obj/item/leash
 	reqs = list(/obj/item/rope = 1)
 	tools = list(/obj/item/needle)
@@ -87,7 +87,7 @@
 	always_availible = TRUE
 
 /datum/crafting_recipe/roguetown/survival/chain_leash
-	name = "chain leash (1 chain)"
+	name = "chain leash"
 	result = /obj/item/leash/chain
 	reqs = list(/obj/item/rope/chain = 1)
 	verbage_simple = "craft"
@@ -140,7 +140,7 @@
 	subtype_reqs = TRUE
 
 /datum/crafting_recipe/roguetown/survival/sbaita
-	name = "sweetbait (apple)"
+	name = "sweetbait - apple"
 	result = /obj/item/bait/sweet
 	reqs = list(
 		/obj/item/storage/roguebag = 1,
@@ -149,7 +149,7 @@
 	subtype_reqs = TRUE
 
 /datum/crafting_recipe/roguetown/survival/sbait
-	name = "sweetbait (berry)"
+	name = "sweetbait - berry"
 	result = /obj/item/bait/sweet
 	reqs = list(
 		/obj/item/storage/roguebag = 1,
@@ -416,7 +416,7 @@
 	craftdiff = 1
 
 /datum/crafting_recipe/roguetown/survival/improvisedclamp
-	name = "improvised retractor ()"
+	name = "improvised retractor"
 	result = /obj/item/rogueweapon/surgery/retractor/improv
 	reqs = list(
 		/obj/item/natural/fibers = 1,
