@@ -32,7 +32,7 @@
 	craftdiff = 1
 
 /datum/crafting_recipe/roguetown/leather/corset
-	name = "corset"
+	name = "corset (1 fibers, 1 leather)"
 	result = /obj/item/clothing/suit/roguetown/armor/corset
 	reqs = list(/obj/item/natural/hide/cured = 1,
 				/obj/item/natural/fibers = 1)
