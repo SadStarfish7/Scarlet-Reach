@@ -1151,6 +1151,7 @@
 	var/mob/living/L = pulledby
 	var/combat_modifier = 1
 	var/agg_grab = FALSE
+	var/size_diff = 0
 
 	if(!L) // we're pulling ourself, abort
 		return FALSE
@@ -1159,6 +1160,11 @@
 		wrestling_diff += (get_skill_level(/datum/skill/combat/wrestling)) //NPCs don't use this
 	if(L.mind)
 		wrestling_diff -= (L.get_skill_level(/datum/skill/combat/wrestling))
+
+	if(HAS_TRAIT(src,TRAIT_BIGGUY))
+		size_diff++
+	if(HAS_TRAIT(L,TRAIT_BIGGUY))
+		size_diff--
 	if(L.grab_state > GRAB_PASSIVE)
 		agg_grab = TRUE
 
@@ -1181,6 +1187,8 @@
 			combat_modifier -= 0.15
 
 	resist_chance += max((wrestling_diff * 10), -20)
+	resist_chance += size_diff * 10 //20% better chance if you're bigger, -20% chance if they are. Size matters.
+
 	if(HAS_TRAIT(src, TRAIT_GARROTED))
 		resist_chance += (STACON - L.STASPD) * 5
 	else
