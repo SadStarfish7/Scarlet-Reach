@@ -332,6 +332,7 @@
 		affected.owner?.death()
 		bodypart_owner?.dismemberable = FALSE
 		addtimer(CALLBACK(src, PROC_REF(reset_dismemberment_immunity)), immunity_time)
+		playsound(affected?.owner, 'sound/combat/dismemberment/grievous-behead.ogg', 250, FALSE, -1)
 		
 /datum/wound/grievous/proc/reset_dismemberment_immunity()
 	if (!bodypart_owner || QDELETED(src))
