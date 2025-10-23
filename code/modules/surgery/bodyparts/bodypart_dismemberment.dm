@@ -72,7 +72,10 @@
 		// extra note: we only do this for mobs with a mind, aka not NPCS. npcs always get insta-decapped as before
 		if (owner?.client && !vorpal && !guillotine_execution && two_stage_death && !grievously_wounded)
 			add_wound(/datum/wound/grievous/pre_decapitation) // this causes a bigass wound, marks the limb as greviously wounded and instantly kills the affected user.
-			C.visible_message(span_danger("<B>[C] is LYFE-ENDED as their ravaged neck BLOSSOMS into petals of GORE and BONE!</B>"))
+			if (skeletonized)
+				C.visible_message(span_danger("<b>[C]'s bony skull is MULCHED by a fearsome blow, spalling into a CLOUD of SHARDS!</b>"))
+			else
+				C.visible_message(span_danger("<B>[C] is LYFE-ENDED as their ravaged neck BLOSSOMS into petals of GORE and BONE!</B>"))
 			return
 		else
 			// we're greviously wounded OR we don't give a shit about two-stage death (guillotines, npcs, etc)
