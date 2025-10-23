@@ -73,9 +73,9 @@
 		if (owner?.client && !vorpal && !guillotine_execution && two_stage_death && !grievously_wounded)
 			add_wound(/datum/wound/grievous/pre_decapitation) // this causes a bigass wound, marks the limb as greviously wounded and instantly kills the affected user.
 			if (skeletonized)
-				C.visible_message(span_danger("<b>[C]'s bony skull is MULCHED by a fearsome blow, spalling into a CLOUD of SHARDS!</b>"))
+				C.visible_message(span_danger("<b>[C]'s bony skull is <span class='crit'>MULCHED</span> by a fearsome blow, spalling into a <span class='crit'>CLOUD of SHARDS!</span></b>"))
 			else
-				C.visible_message(span_danger("<B>[C] is LYFE-ENDED as their ravaged neck BLOSSOMS into petals of GORE and BONE!</B>"))
+				C.visible_message(span_danger("<B>[C] is <span class='crit'>LYFE-ENDED</span> as their ravaged neck <span class='crit'>BLOSSOMS</span> into petals of <span class='crit'>GORE and BONE!</span></B>"))
 			return
 		else
 			// we're greviously wounded OR we don't give a shit about two-stage death (guillotines, npcs, etc)
