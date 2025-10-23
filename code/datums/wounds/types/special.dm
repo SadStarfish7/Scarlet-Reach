@@ -337,7 +337,10 @@
 	if (!bodypart_owner || QDELETED(src))
 		return
 	bodypart_owner?.dismemberable = initial(bodypart_owner?.dismemberable)
-	owner?.visible_message(span_smallred("The musculature around <b>[owner]</b>'s [bodypart_owner.name] relaxes its agonal seizing..."))
+	if (bodypart_owner?.skeletonized)
+		owner?.visible_message(span_smallred("Delicate craze lines creep up along <b>[owner]</b>'s sundered skull..."))
+	else
+		owner?.visible_message(span_smallred("The musculature around <b>[owner]</b>'s [bodypart_owner.name] relaxes its agonal seizing..."))
 
 /datum/wound/grievous/remove_from_bodypart()
 	bodypart_owner?.grievously_wounded = FALSE
