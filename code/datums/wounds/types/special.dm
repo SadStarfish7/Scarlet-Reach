@@ -316,11 +316,9 @@
 	sewn_whp = 25
 	bleed_rate = 25 // equivalent to carotid artery tear
 	sewn_bleed_rate = 0.5
-	healable_by_miracles = FALSE // you gotta work for this one
 	can_sew = TRUE
 	can_cauterize = FALSE
 	disabling = TRUE
-	sleep_healing = 0
 	var/immunity_time = 12 SECONDS // how long the wound actively prevents further dismemberment attempts for
 
 /datum/wound/grievous/on_bodypart_gain(obj/item/bodypart/affected)
