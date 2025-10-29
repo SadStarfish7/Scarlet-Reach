@@ -7,6 +7,8 @@
 	cooldown_min = 50
 	die_with_shapeshifted_form =  FALSE
 	shapeshift_type = /mob/living/simple_animal/hostile/retaliate/bat
+	shifted_speed_increase = 1.25
+	show_true_name = FALSE
 	convert_damage = FALSE
 	do_gibs = FALSE
 
@@ -33,6 +35,8 @@
 	die_with_shapeshifted_form =  FALSE
 	shapeshift_type = /mob/living/simple_animal/hostile/retaliate/bat/crow
 	sound = 'sound/vo/mobs/bird/birdfly.ogg'
+	shifted_speed_increase = 1.25
+	show_true_name = FALSE
 	convert_damage = FALSE
 	do_gibs = FALSE
 

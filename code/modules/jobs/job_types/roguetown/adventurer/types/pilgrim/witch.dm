@@ -47,7 +47,7 @@
 						/obj/item/ritechalk = 1,
 						)
 
-	var/classes = list("Old Magick", "Godsblood")
+	var/classes = list("Old Magick", "Godsblood", "Mystagogue")
 	var/classchoice = input("How do your powers manifest?", "THE OLD WAYS") as anything in classes
 
 	var/shapeshifts = list("Zad", "Cat", "Bat", "Lesser Volf")
@@ -63,8 +63,20 @@
 		if("Godsblood")
 			//miracle witch: capped at t2 miracles. cannot pray to regain devo, but has high innate regen because of it (2 instead of 1 from major)
 			var/datum/devotion/D = new /datum/devotion/(H, H.patron)
-			D.grant_miracles(H, cleric_tier = CLERIC_T2, passive_gain = CLERIC_REGEN_WITCH, start_maxed = TRUE)
+			H.adjust_skillrank(/datum/skill/magic/holy, 1, TRUE)
+			D.grant_miracles(H, cleric_tier = CLERIC_T2, passive_gain = CLERIC_REGEN_WITCH)
 			D.max_devotion *= 0.5
+			neck = /obj/item/clothing/neck/roguetown/psicross/wood
+		if("Mystagogue")
+			// hybrid arcane/holy witch with t1 arcane and t1 miracles, but less spellpoints, lower max devotion and less regen (0.5). Still can't pray.
+			var/datum/devotion/D = new /datum/devotion/(H, H.patron)
+			H.adjust_skillrank(/datum/skill/magic/holy, 1, TRUE)
+			D.grant_miracles(H, cleric_tier = CLERIC_T1, passive_gain = CLERIC_REGEN_MINOR)
+			D.max_devotion *= 0.5
+			ADD_TRAIT(H, TRAIT_ARCYNE_T1, TRAIT_GENERIC)
+			H.adjust_skillrank(/datum/skill/magic/arcane, 1, TRUE)
+			H.mind?.adjust_spellpoints(6) // twelve if you pick arcyne potential
+			beltl = /obj/item/storage/magebag/starter
 			neck = /obj/item/clothing/neck/roguetown/psicross/wood
 
 	if(H.mind)
@@ -81,6 +93,8 @@
 		switch (classchoice)
 			if("Old Magick")
 				H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/guidance)
+				H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/aerosolize)
+
 	if(H.gender == FEMALE)
 		armor = /obj/item/clothing/suit/roguetown/shirt/undershirt/corset
 		shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/lowcut
@@ -111,6 +125,8 @@
 	shapeshift_type = /mob/living/simple_animal/pet/cat
 	convert_damage = FALSE
 	do_gibs = FALSE
+	shifted_speed_increase = 1.5
+	show_true_name = FALSE
 
 /obj/effect/proc_holder/spell/targeted/shapeshift/lesser_wolf
 	name = "Lesser Volf Form"
@@ -124,6 +140,8 @@
 	shapeshift_type = /mob/living/simple_animal/hostile/retaliate/rogue/wolf/witch_shifted
 	convert_damage = FALSE
 	do_gibs = FALSE
+	shifted_speed_increase = 1.5
+	show_true_name = FALSE
 
 /mob/living/simple_animal/hostile/retaliate/rogue/wolf/witch_shifted
 	name = "lesser volf"
@@ -136,3 +154,7 @@
 	melee_damage_upper = 14
 	del_on_deaggro = null
 	defprob = 70
+
+/mob/living/simple_animal/pet/cat/witch_shifted
+	name = "aloof cat"
+	desc = "A bored-seeming feline. This one has a peculiar intelligence in its green eyes..."

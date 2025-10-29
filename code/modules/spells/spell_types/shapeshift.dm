@@ -11,6 +11,9 @@
 	invocation_type = "shout"
 	action_icon_state = "shapeshift"
 	var/do_gibs = TRUE
+	var/show_true_name = TRUE
+
+	var/shifted_speed_increase = 1 // this is applied as a NEGATIVE multiplicative_slowdown, so 1.25 would be a 25% speed increase
 
 	var/revert_on_death = TRUE
 	var/die_with_shapeshifted_form = TRUE
@@ -71,8 +74,11 @@
 		return
 
 	var/mob/living/shape = new shapeshift_type(caster.loc)
+	if (shifted_speed_increase && shifted_speed_increase != 1)
+		shape.add_movespeed_modifier(type, update=TRUE, priority=100, multiplicative_slowdown=-shifted_speed_increase)
 	H = new(shape,src,caster)
-	shape.name = "[shape] ([caster.real_name])"
+	if (show_true_name)
+		shape.name = "[shape] ([caster.real_name])"
 
 	clothes_req = FALSE
 	human_req = FALSE
