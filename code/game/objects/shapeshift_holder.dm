@@ -83,7 +83,8 @@
 	if (stored) //don't complain i just want to make this work w/o runtiming and i'm lazy
 		stored.stasis = FALSE
 	qdel(shape)
-	qdel(src)
+	if (!QDELETED(src))
+		qdel(src)
 
 /datum/soullink/shapeshift
 	var/obj/shapeshift_holder/source
