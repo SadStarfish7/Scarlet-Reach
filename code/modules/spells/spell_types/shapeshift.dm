@@ -10,6 +10,7 @@
 	invocation = "RAC'WA NO!"
 	invocation_type = "shout"
 	action_icon_state = "shapeshift"
+	var/do_gibs = TRUE
 
 	var/revert_on_death = TRUE
 	var/die_with_shapeshifted_form = TRUE
@@ -76,8 +77,9 @@
 	clothes_req = FALSE
 	human_req = FALSE
 
-	playsound(caster.loc, pick('sound/combat/gib (1).ogg','sound/combat/gib (2).ogg'), 200, FALSE, 3)
-	caster.spawn_gibs(FALSE)
+	if (do_gibs)
+		playsound(caster.loc, pick('sound/combat/gib (1).ogg','sound/combat/gib (2).ogg'), 200, FALSE, 3)
+		caster.spawn_gibs(FALSE)
 
 /obj/effect/proc_holder/spell/targeted/shapeshift/proc/Restore(mob/living/shape)
 	var/obj/shapeshift_holder/H = locate() in shape
