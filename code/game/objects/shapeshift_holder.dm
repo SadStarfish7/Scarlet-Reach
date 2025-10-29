@@ -73,7 +73,7 @@
 		shape.mind?.transfer_to(stored)
 	if(death)
 		stored.death()
-	else if(source.convert_damage)
+	else if(stored && source.convert_damage)
 		stored.revive(full_heal = TRUE, admin_revive = FALSE)
 
 		var/damage_percent = (shape.maxHealth - shape.health)/shape.maxHealth;
