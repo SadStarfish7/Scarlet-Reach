@@ -50,7 +50,7 @@
 	var/classes = list("Old Magick", "Godsblood", "Mystagogue")
 	var/classchoice = input("How do your powers manifest?", "THE OLD WAYS") as anything in classes
 
-	var/shapeshifts = list("Zad", "Cat", "Bat", "Lesser Volf")
+	var/shapeshifts = list("Zad", "Cat", "Cat (Black)", "Bat", "Lesser Volf")
 	var/shapeshiftchoice = input("What form does your second skin take?", "THE OLD WAYS") as anything in shapeshifts
 
 	switch (classchoice)
@@ -85,6 +85,8 @@
 				H.mind.AddSpell(new /obj/effect/proc_holder/spell/targeted/shapeshift/crow/witch)
 			if("Cat")
 				H.mind.AddSpell(new /obj/effect/proc_holder/spell/targeted/shapeshift/cat)
+			if("Cat (Black)")
+				H.mind.AddSpell(new /obj/effect/proc_holder/spell/targeted/shapeshift/cat/black)
 			if("Bat")
 				H.mind.AddSpell(new /obj/effect/proc_holder/spell/targeted/shapeshift/bat/witch)
 			if("Lesser Volf")
@@ -134,11 +136,14 @@
 	recharge_time = 50
 	cooldown_min = 50
 	die_with_shapeshifted_form = FALSE
-	shapeshift_type = /mob/living/simple_animal/pet/cat
+	shapeshift_type = /mob/living/simple_animal/pet/cat/witch_shifted
 	convert_damage = FALSE
 	do_gibs = FALSE
 	shifted_speed_increase = 1.5
 	show_true_name = FALSE
+
+/obj/effect/proc_holder/spell/targeted/shapeshift/cat/black
+	shapeshift_type = /mob/living/simple_animal/pet/cat/rogue/black/witch_shifted
 
 /obj/effect/proc_holder/spell/targeted/shapeshift/lesser_wolf
 	name = "Lesser Volf Form"
@@ -157,7 +162,7 @@
 
 /mob/living/simple_animal/hostile/retaliate/rogue/wolf/witch_shifted
 	name = "lesser volf"
-	desc = "A smaller, more nimble variant of the classic volf. Rarely seen around these parts. This one has a peculiar intelligence in its yellow eyes..."
+	desc = "A smaller, runtier variant of the classic volf that hounds the woods nearby. Rarely seen around these parts, and doesn't look nearly as dangerous as its larger counterparts. This one has a peculiar intelligence in its yellow eyes..."
 	STASPD = 15
 	STASTR = 3
 	STACON = 5
@@ -169,6 +174,14 @@
 /mob/living/simple_animal/pet/cat/witch_shifted
 	name = "aloof cat"
 	desc = "A bored-seeming feline. This one has a peculiar intelligence in its green eyes..."
+	defprob = 90
+	STASPD = 18
+	STASTR = 1
+	STACON = 3
+
+/mob/living/simple_animal/pet/cat/rogue/black/witch_shifted
+	name = "voidblack cat"
+	desc = "Supposedly sacred to Necra, and just as interested in rats as their lesser counterparts. This one has a strange intelligence behind its dark, wide eyes..."
 	defprob = 90
 	STASPD = 18
 	STASTR = 1
