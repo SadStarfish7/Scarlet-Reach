@@ -178,6 +178,9 @@
 	STASPD = 18
 	STASTR = 1
 	STACON = 3
+	base_intents = list(/datum/intent/simple/claw/witch_cat)
+	melee_damage_lower = 2
+	melee_damage_upper = 5
 
 /mob/living/simple_animal/pet/cat/rogue/black/witch_shifted
 	name = "voidblack cat"
@@ -186,3 +189,10 @@
 	STASPD = 18
 	STASTR = 1
 	STACON = 3
+	base_intents = list(/datum/intent/simple/claw/witch_cat)
+	melee_damage_lower = 2
+	melee_damage_upper = 5
+
+/datum/intent/simple/claw/witch_cat
+	name = "scratch"
+	attack_verb = list("scratches", "claws")
