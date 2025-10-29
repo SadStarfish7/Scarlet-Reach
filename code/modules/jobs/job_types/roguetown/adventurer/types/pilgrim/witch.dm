@@ -116,10 +116,14 @@
 /obj/effect/proc_holder/spell/targeted/shapeshift/crow/witch
 	die_with_shapeshifted_form = TRUE
 	convert_damage = TRUE
+	shifted_speed_increase = 1.25
+	show_true_name = FALSE
 
 /obj/effect/proc_holder/spell/targeted/shapeshift/bat/witch
 	die_with_shapeshifted_form = TRUE
 	convert_damage = TRUE
+	shifted_speed_increase = 1.25
+	show_true_name = FALSE
 
 /obj/effect/proc_holder/spell/targeted/shapeshift/cat
 	name = "Cat Form"
