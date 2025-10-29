@@ -82,11 +82,11 @@
 	if(H.mind)
 		switch (shapeshiftchoice)
 			if("Zad")
-				H.mind.AddSpell(new /obj/effect/proc_holder/spell/targeted/shapeshift/crow)
+				H.mind.AddSpell(new /obj/effect/proc_holder/spell/targeted/shapeshift/crow/witch)
 			if("Cat")
 				H.mind.AddSpell(new /obj/effect/proc_holder/spell/targeted/shapeshift/cat)
 			if("Bat")
-				H.mind.AddSpell(new /obj/effect/proc_holder/spell/targeted/shapeshift/bat)
+				H.mind.AddSpell(new /obj/effect/proc_holder/spell/targeted/shapeshift/bat/witch)
 			if("Lesser Volf")
 				H.mind.AddSpell(new /obj/effect/proc_holder/spell/targeted/shapeshift/lesser_wolf)
 			
@@ -112,6 +112,14 @@
 	   		/datum/patron/inhumen/baotha)
 			H.cmode_music = 'sound/music/combat_cult.ogg'
 			ADD_TRAIT(H, TRAIT_HERESIARCH, TRAIT_GENERIC)
+
+/obj/effect/proc_holder/spell/targeted/shapeshift/crow/witch
+	die_with_shapeshifted_form = TRUE
+	convert_damage = TRUE
+
+/obj/effect/proc_holder/spell/targeted/shapeshift/bat/witch
+	die_with_shapeshifted_form = TRUE
+	convert_damage = TRUE
 
 /obj/effect/proc_holder/spell/targeted/shapeshift/cat
 	name = "Cat Form"
