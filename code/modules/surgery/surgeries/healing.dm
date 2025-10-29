@@ -119,16 +119,16 @@
 /********************BRUTE STEPS********************/
 /datum/surgery_step/heal/brute
 	name = "Tend bruises"
-	brutehealing = 30
-	missinghpbonus = 3
+	brutehealing = 25
+	missinghpbonus = 5
 	requires_tech = FALSE
 	replaced_by = null
 
 /********************BURN STEPS********************/
 /datum/surgery_step/heal/burn
 	name = "Tend burns"
-	burnhealing = 30
-	missinghpbonus = 3
+	burnhealing = 25
+	missinghpbonus = 5
 	requires_tech = FALSE
 	replaced_by = null
 
@@ -138,6 +138,6 @@
 	name = "Tend damage"
 	brutehealing = 6
 	burnhealing = 6
-	missinghpbonus = 2.5
+	missinghpbonus = 3
 	requires_tech = FALSE
 	replaced_by = null

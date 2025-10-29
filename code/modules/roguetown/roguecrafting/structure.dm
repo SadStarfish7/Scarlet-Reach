@@ -656,7 +656,7 @@
 /datum/crafting_recipe/roguetown/structure/operatingtable
 	name = "operating table"
 	result = /obj/structure/table/optable
-	reqs = list(/obj/item/grown/log/tree/small = 2, /obj/item/ingot/iron = 1, /obj/item/alch/calendula = 1)
+	reqs = list(/obj/item/grown/log/tree/small = 2, /obj/item/ingot/iron = 1)
 	verbage_simple = "construct"
 	verbage = "constructs"
 	skillcraft = /datum/skill/craft/carpentry
