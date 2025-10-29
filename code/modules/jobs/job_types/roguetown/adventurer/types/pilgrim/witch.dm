@@ -154,7 +154,6 @@
 /mob/living/simple_animal/hostile/retaliate/rogue/wolf/witch_shifted
 	name = "lesser volf"
 	desc = "A smaller, more nimble variant of the classic volf. Rarely seen around these parts. This one has a peculiar intelligence in its yellow eyes..."
-	turns_per_move = 2
 	STASPD = 15
 	STASTR = 3
 	STACON = 5
@@ -166,3 +165,7 @@
 /mob/living/simple_animal/pet/cat/witch_shifted
 	name = "aloof cat"
 	desc = "A bored-seeming feline. This one has a peculiar intelligence in its green eyes..."
+	defprob = 90
+	STASPD = 18
+	STASTR = 1
+	STACON = 3
