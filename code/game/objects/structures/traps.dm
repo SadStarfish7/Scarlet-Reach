@@ -54,7 +54,8 @@
 		to_chat(user,span_notice("I reveal and temporarily disarm \the [src]"))
 		flare()
 /obj/structure/trap/attacked_by(obj/item/I, mob/living/user)
-	Crossed(user)
+	..() // use your reach advantage or go fuck yourself.
+	Crossed(user) 
 
 /obj/structure/trap/attack_hand(mob/user)
 	var/mob/living/carbon/C = user
