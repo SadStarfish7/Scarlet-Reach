@@ -109,7 +109,7 @@
 	outfit = /datum/outfit/job/roguetown/adventurer/yoruku
 	subclass_languages = list(/datum/language/kazengunese)
 	cmode_music = 'sound/music/combat_kazengite.ogg'
-	traits_applied = list(TRAIT_STEELHEARTED, TRAIT_DODGEEXPERT, TRAIT_LIGHT_STEP)
+	traits_applied = list(TRAIT_STEELHEARTED, TRAIT_DODGEEXPERT, TRAIT_LIGHT_STEP, TRAIT_KEENEARS)
 	subclass_stats = list(
 		STATKEY_SPD = 3,
 		STATKEY_PER = 1,
@@ -126,7 +126,7 @@
 		/datum/skill/misc/athletics = SKILL_LEVEL_EXPERT,
 		/datum/skill/misc/reading = SKILL_LEVEL_NOVICE,
 		/datum/skill/misc/sneaking = SKILL_LEVEL_EXPERT,
-		/datum/skill/misc/lockpicking = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/lockpicking = SKILL_LEVEL_APPRENTICE,
 		/datum/skill/craft/traps = SKILL_LEVEL_EXPERT,
 	)
 
@@ -139,7 +139,7 @@
 	backpack_contents = list(
 		/obj/item/flashlight/flare/torch = 1,
 		/obj/item/recipe_book/survival = 1,
-		/obj/item/reagent_containers/glass/bottle/rogue/poison = 1,
+		/obj/item/reagent_containers/glass/bottle/rogue/strongpoison = 1,
 		)
 	belt = /obj/item/storage/belt/rogue/leather/knifebelt/black/kazengun
 	gloves = /obj/item/clothing/gloves/roguetown/eastgloves1
