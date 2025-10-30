@@ -166,7 +166,7 @@
 
 /datum/crafting_recipe/roguetown/leather/unique/captainrobe/light
 	name = "floral robes (1 silk, 1 leather, 2 fiber)"
-	result = list(obj/item/clothing/suit/roguetown/armor/basiceast/captainrobe/light)
+	result = list(/obj/item/clothing/suit/roguetown/armor/basiceast/captainrobe/light)
 	reqs = list(
 		/obj/item/natural/hide/cured = 1,
 		/obj/item/natural/fibers = 2,
