@@ -643,6 +643,13 @@ datum/crafting_recipe/roguetown/sewing/Purdress
 				/obj/item/natural/fibers = 1)
 	craftdiff = 3
 
+/datum/crafting_recipe/roguetown/sewing/scarf
+	name = "scarf (1 fibers, 1 cloth)"
+	result = list(/obj/item/clothing/head/roguetown/scarf)
+	reqs = list(/obj/item/natural/cloth = 1,
+				/obj/item/natural/fibers = 1)
+	craftdiff = 2
+
 /datum/crafting_recipe/roguetown/sewing/royalgown
 	name = "royal gown (2 fibers, 3 cloth, 3 silk)"
 	result = list(/obj/item/clothing/suit/roguetown/shirt/dress/royal)
@@ -721,7 +728,7 @@ datum/crafting_recipe/roguetown/sewing/Purdress
 	tools = list(/obj/item/needle)
 	craftdiff = 5
 	sellprice = 25
-	
+
 /datum/crafting_recipe/roguetown/sewing/silkdress
 	name = "ornate silk dress (2 fibers, 2 cloth, 2 silk)"
 	result = list(/obj/item/clothing/suit/roguetown/shirt/dress/silkdress/steward)
@@ -987,7 +994,7 @@ datum/crafting_recipe/roguetown/sewing/Purdress
 	tools = list(/obj/item/needle)
 	craftdiff = 4
 	sellprice = 13
-	
+
 /datum/crafting_recipe/roguetown/sewing/weddingdress
 	name = "wedding silk dress (2 fibers, 3 cloth, 2 silk, 2 gold dust)"
 	result = list(/obj/item/clothing/suit/roguetown/shirt/dress/silkdress/weddingdress)
@@ -1151,7 +1158,7 @@ datum/crafting_recipe/roguetown/sewing/Purdress
 	reqs = list(/obj/item/natural/cloth = 2, /obj/item/natural/fibers = 1)
 	tools = list(/obj/item/needle)
 	craftdiff = 3
-	
+
 // tennite templar tabards
 
 /datum/crafting_recipe/roguetown/sewing/templar_astrata
