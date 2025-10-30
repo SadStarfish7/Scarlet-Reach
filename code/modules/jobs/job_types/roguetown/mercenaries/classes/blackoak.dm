@@ -43,7 +43,7 @@
 /datum/outfit/job/roguetown/mercenary/blackoak/pre_equip(mob/living/carbon/human/H)
 	..()
 
-	var/weapons = list("Glaive", "Boar Spear",  "Elven Sabre & Buckler")
+	var/weapons = list("Glaive", "Boar Spear + Kite",  "Elven Sabre & Buckler")
 	var/weapon_choice = input("Choose your weapon.", "TAKE UP ARMS") as anything in weapons
 	switch(weapon_choice)
 		if("Glaive")
