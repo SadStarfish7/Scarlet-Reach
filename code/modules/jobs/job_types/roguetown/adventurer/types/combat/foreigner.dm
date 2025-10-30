@@ -139,7 +139,7 @@
 	backpack_contents = list(
 		/obj/item/flashlight/flare/torch = 1,
 		/obj/item/recipe_book/survival = 1,
-		/obj/item/reagent_containers/glass/bottle/rogue/strongpoison = 1,
+		/obj/item/reagent_containers/glass/bottle/rogue/berrypoison = 1,
 		)
 	belt = /obj/item/storage/belt/rogue/leather/knifebelt/black/kazengun
 	gloves = /obj/item/clothing/gloves/roguetown/eastgloves1
