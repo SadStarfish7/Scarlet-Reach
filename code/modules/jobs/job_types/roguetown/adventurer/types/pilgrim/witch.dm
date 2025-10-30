@@ -64,14 +64,14 @@
 			//miracle witch: capped at t2 miracles. cannot pray to regain devo, but has high innate regen because of it (2 instead of 1 from major)
 			var/datum/devotion/D = new /datum/devotion/(H, H.patron)
 			H.adjust_skillrank(/datum/skill/magic/holy, 1, TRUE)
-			D.grant_miracles(H, cleric_tier = CLERIC_T2, passive_gain = CLERIC_REGEN_WITCH)
+			D.grant_miracles(H, cleric_tier = CLERIC_T2, passive_gain = CLERIC_REGEN_WITCH, devotion_limit = CLERIC_REQ_2)
 			D.max_devotion *= 0.5
 			neck = /obj/item/clothing/neck/roguetown/psicross/wood
 		if("Mystagogue")
 			// hybrid arcane/holy witch with t1 arcane and t1 miracles, but less spellpoints, lower max devotion and less regen (0.5). Still can't pray.
 			var/datum/devotion/D = new /datum/devotion/(H, H.patron)
 			H.adjust_skillrank(/datum/skill/magic/holy, 1, TRUE)
-			D.grant_miracles(H, cleric_tier = CLERIC_T1, passive_gain = CLERIC_REGEN_MINOR)
+			D.grant_miracles(H, cleric_tier = CLERIC_T1, passive_gain = CLERIC_REGEN_MINOR, devotion_limit = CLERIC_REQ_1)
 			D.max_devotion *= 0.5
 			ADD_TRAIT(H, TRAIT_ARCYNE_T1, TRAIT_GENERIC)
 			H.adjust_skillrank(/datum/skill/magic/arcane, 1, TRUE)
@@ -118,13 +118,13 @@
 /obj/effect/proc_holder/spell/targeted/shapeshift/crow/witch
 	die_with_shapeshifted_form = TRUE
 	convert_damage = TRUE
-	shifted_speed_increase = 1.25
+	shifted_speed_increase = 1.15
 	show_true_name = FALSE
 
 /obj/effect/proc_holder/spell/targeted/shapeshift/bat/witch
 	die_with_shapeshifted_form = TRUE
 	convert_damage = TRUE
-	shifted_speed_increase = 1.25
+	shifted_speed_increase = 1.15
 	show_true_name = FALSE
 
 /obj/effect/proc_holder/spell/targeted/shapeshift/cat
@@ -139,7 +139,7 @@
 	shapeshift_type = /mob/living/simple_animal/pet/cat/witch_shifted
 	convert_damage = FALSE
 	do_gibs = FALSE
-	shifted_speed_increase = 1.5
+	shifted_speed_increase = 1.35
 	show_true_name = FALSE
 
 /obj/effect/proc_holder/spell/targeted/shapeshift/cat/black
@@ -157,7 +157,7 @@
 	shapeshift_type = /mob/living/simple_animal/hostile/retaliate/rogue/wolf/witch_shifted
 	convert_damage = FALSE
 	do_gibs = FALSE
-	shifted_speed_increase = 1.5
+	shifted_speed_increase = 1.35
 	show_true_name = FALSE
 
 /mob/living/simple_animal/hostile/retaliate/rogue/wolf/witch_shifted
