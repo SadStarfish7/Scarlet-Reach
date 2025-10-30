@@ -16811,10 +16811,6 @@
 /obj/structure/flora/roguegrass,
 /turf/open/floor/rogue/grass,
 /area/rogue/outdoors/beach)
-"eJc" = (
-/obj/item/rogueweapon/estoc,
-/turf/closed/mineral/random/rogue,
-/area/rogue/under/cavewet/bogcaves)
 "eJo" = (
 /turf/closed/wall/mineral/rogue/decostone/cand,
 /area/rogue/outdoors/mountains/decap)
@@ -18398,6 +18394,7 @@
 /obj/structure/fluff/littlebanners/bluewhite{
 	pixel_y = -6
 	},
+/obj/effect/spawner/trap,
 /turf/open/floor/carpet/stellar,
 /area/rogue/under/cave/goblinfort)
 "ffs" = (
@@ -62014,6 +62011,10 @@
 /obj/effect/spawner/lootdrop/roguetown/sewers,
 /turf/open/floor/rogue/greenstone,
 /area/rogue/under/cave/dungeon1/gethsmane/inner)
+"rmf" = (
+/mob/living/simple_animal/hostile/retaliate/rogue/dragon,
+/turf/closed/wall/mineral/rogue/stonebrick,
+/area/rogue/under/cave/goblinfort)
 "rmi" = (
 /obj/effect/decal/cobbleedge{
 	dir = 1;
@@ -67892,6 +67893,10 @@
 	},
 /turf/open/floor/rogue/cobblerock,
 /area/rogue/outdoors/exposed/town/keep)
+"sRo" = (
+/mob/living/simple_animal/hostile/retaliate/rogue/dragon,
+/turf/open/transparent/openspace,
+/area/rogue/outdoors/beach/forest)
 "sRr" = (
 /obj/structure/table/wood/poor,
 /obj/item/toy/cards/deck,
@@ -103259,7 +103264,7 @@ abA
 uEf
 uEf
 mVO
-eJc
+mVO
 mVO
 mVO
 mVO
@@ -489019,7 +489024,7 @@ mRu
 mQP
 mQP
 mRu
-mQP
+rmf
 mQP
 mQP
 mQP
@@ -502100,7 +502105,7 @@ vMR
 vMR
 vMR
 vMR
-vMR
+sRo
 vMR
 vMR
 vMR
