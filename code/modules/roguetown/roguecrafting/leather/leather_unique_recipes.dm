@@ -212,16 +212,16 @@
 	craftdiff = 5
 
 /datum/crafting_recipe/roguetown/leather/unique/shrinekeeper
-	name = "eastern ceremonial robe (4 silk, 4 leather, 2 fiber, 2 tallow)"
+	name = "eastern ceremonial robe (6 silk, 4 leather, 2 fiber, 2 tallow)"
 	result = list(/obj/item/clothing/suit/roguetown/armor/basiceast/crafteast/shrinekeeper)
 	reqs = list(
 		/obj/item/natural/hide/cured = 4,
 		/obj/item/reagent_containers/food/snacks/tallow = 2,
 		/obj/item/natural/fibers = 2,
-		/obj/item/natural/silk = 4
+		/obj/item/natural/silk = 6
 		)
 	tools = list(/obj/item/needle)
-	craftdiff = 5
+	craftdiff = 6
 
 /datum/crafting_recipe/roguetown/leather/unique/captainrobe
 	name = "foreign robe (6 silk, 4 leather, 2 fiber, 2 tallow)"
@@ -245,7 +245,7 @@
 		/obj/item/natural/silk = 2
 		)
 	tools = list(/obj/item/needle)
-	craftdiff = 3
+	craftdiff = 4
 
 /datum/crafting_recipe/roguetown/leather/unique/eastpants2
 	name = "strange ripped pants (2 silk, 2 fibers, 2 leather, 1 tallow)"
@@ -257,7 +257,7 @@
 		/obj/item/natural/silk = 2
 		)
 	tools = list(/obj/item/needle)
-	craftdiff = 3
+	craftdiff = 4
 
 /datum/crafting_recipe/roguetown/leather/unique/eastgloves1
 	name = "black gloves (2 silk, 2 fibers, 1 leather)"
@@ -271,7 +271,7 @@
 	craftdiff = 3
 
 /datum/crafting_recipe/roguetown/leather/unique/eastgloves2
-	name = "decorated dobo robe (2 silk, 2 fibers, 1 leather)"
+	name = "stylish gloves (2 silk, 2 fibers, 1 leather)"
 	result = list(/obj/item/clothing/gloves/roguetown/eastgloves2)
 	reqs = list(
 		/obj/item/natural/hide/cured = 1,

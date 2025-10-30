@@ -904,7 +904,7 @@
 /datum/anvil_recipe/armor/steel/yoroku_oni
 	name = "Oni Mask"
 	req_bar = /obj/item/ingot/steel
-	additional_items = list(/obj/item/dye_brush)
+	additional_items = list(/obj/item/hair_dye_cream, /obj/item/natural/cloth)
 	created_item = /obj/item/clothing/mask/rogue/facemask/yoruku_oni
 	createditem_num = 1
 	craftdiff = 3
@@ -912,7 +912,7 @@
 /datum/anvil_recipe/armor/steel/yoroku_kitsune
 	name = "Kitsune Mask"
 	req_bar = /obj/item/ingot/steel
-	additional_items = list(/obj/item/dye_brush)
+	additional_items = list(/obj/item/hair_dye_cream, /obj/item/natural/cloth)
 	created_item = /obj/item/clothing/mask/rogue/facemask/yoruku_kitsune
 	createditem_num = 1
 	craftdiff = 3
