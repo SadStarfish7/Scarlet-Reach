@@ -18,7 +18,7 @@
 	category = "Table"
 	result = list(/obj/item/bomb, /obj/item/bomb, /obj/item/bomb)
 	reqs = list(/obj/item/reagent_containers/glass/bottle = 3, /obj/item/ash = 6, /obj/item/rogueore/coal = 3, /obj/item/natural/cloth = 3)
-	craftdiff = 2
+	craftdiff = 3
 
 /datum/crafting_recipe/roguetown/alchemy/sbomb
 	name = "smoke bomb"
@@ -32,7 +32,7 @@
 	category = "Table"
 	result = list(/obj/item/smokebomb, /obj/item/smokebomb, /obj/item/smokebomb)
 	reqs = list(/obj/item/reagent_containers/glass/bottle = 3, /obj/item/ash = 6, /obj/item/reagent_containers/powder/salt = 3, /obj/item/natural/cloth = 3)
-	craftdiff = 2
+	craftdiff = 3
 
 /datum/crafting_recipe/roguetown/alchemy/ozium
 	name = "ozium"
