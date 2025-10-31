@@ -1951,4 +1951,4 @@
 
 	emote("sniff", intentional = TRUE)
 
-    return TRUE
+return TRUE
