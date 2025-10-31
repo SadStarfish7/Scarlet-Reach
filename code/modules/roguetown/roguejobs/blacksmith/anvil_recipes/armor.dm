@@ -918,7 +918,7 @@
 	craftdiff = 3
 
 /datum/anvil_recipe/armor/steel/mempo
-	name = "steel mempo"
+	name = "Steel Mempo"
 	req_bar = /obj/item/ingot/steel
 	created_item = /obj/item/clothing/mask/rogue/facemask/steel/kazengun
 	createditem_num = 1
