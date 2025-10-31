@@ -1846,46 +1846,6 @@
 
 	emote("ffsalute", intentional =  TRUE)
 
-/datum/emote/living/praysuicide
-    key = "praysuicide"
-    key_third_person = "utters their last words"
-    message = ""
-    emote_type = EMOTE_AUDIBLE
-    stat_allowed = UNCONSCIOUS
-    show_runechat = FALSE
-
-/mob/living/carbon/human/verb/emote_praysuicide()
-    set name = "Pray for suicide"
-    set category = "Emotes"
-    emote("praysuicide", intentional = TRUE)
-
-/datum/emote/living/praysuicide/run_emote(mob/user, params, type_override, intentional)
-    if(!user)
-        return FALSE
-
-    var/mob/living/L = user
-
-
-    to_chat(L, span_danger("I pray to my patron for my death... and I am heard."))
-
-
-    var/lastmsg = params
-    if(!lastmsg)
-        lastmsg = input("Whisper your final words:", "Last Words") as text|null
-    if(!lastmsg)
-        return FALSE
-
-    L.whisper(lastmsg)
-
-    if(iscarbon(L))
-        var/mob/living/carbon/C = L
-        C.adjustOxyLoss(200)
-    else if(isliving(L))
-        L.death()
-    else
-        to_chat(L, span_warning("Nothing happens."))
-
-/*New emotes*/
 /datum/emote/living/yip
 	key = "yip"
 	key_third_person = "yips"
@@ -1951,4 +1911,43 @@
 
 	emote("sniff", intentional = TRUE)
 
-return TRUE
+/datum/emote/living/praysuicide
+    key = "praysuicide"
+    key_third_person = "utters their last words"
+    message = ""
+    emote_type = EMOTE_AUDIBLE
+    stat_allowed = UNCONSCIOUS
+    show_runechat = FALSE
+
+/mob/living/carbon/human/verb/emote_praysuicide()
+    set name = "Pray for suicide"
+    set category = "Emotes"
+    emote("praysuicide", intentional = TRUE)
+
+/datum/emote/living/praysuicide/run_emote(mob/user, params, type_override, intentional)
+    if(!user)
+        return FALSE
+
+    var/mob/living/L = user
+
+
+    to_chat(L, span_danger("I pray to my patron for my death... and I am heard."))
+
+
+    var/lastmsg = params
+    if(!lastmsg)
+        lastmsg = input("Whisper your final words:", "Last Words") as text|null
+    if(!lastmsg)
+        return FALSE
+
+    L.whisper(lastmsg)
+
+    if(iscarbon(L))
+        var/mob/living/carbon/C = L
+        C.adjustOxyLoss(200)
+    else if(isliving(L))
+        L.death()
+    else
+        to_chat(L, span_warning("Nothing happens."))
+
+    return TRUE
