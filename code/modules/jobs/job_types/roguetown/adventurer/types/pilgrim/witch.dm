@@ -122,6 +122,7 @@
 	show_true_name = FALSE
 
 /obj/effect/proc_holder/spell/targeted/shapeshift/bat/witch
+	overlay_state = "bat_transform"
 	die_with_shapeshifted_form = TRUE
 	convert_damage = TRUE
 	shifted_speed_increase = 1.15
@@ -131,6 +132,7 @@
 	name = "Cat Form"
 	desc = ""
 	invocation = ""
+	overlay_state = "cat_transform"
 	gesture_required = TRUE
 	chargetime = 5 SECONDS
 	recharge_time = 50
@@ -149,6 +151,7 @@
 	name = "Lesser Volf Form"
 	desc = ""
 	invocation = ""
+	overlay_state = "volf_transform"
 	gesture_required = TRUE
 	chargetime = 5 SECONDS
 	recharge_time = 50
