@@ -1859,6 +1859,19 @@
 	set category = "Noises"
 	emote("yip", intentional = TRUE)
 
+/datum/emote/living/yap
+	key = "yap"
+	key_third_person = "yaps"
+	message = "yaps!"
+	emote_type = EMOTE_AUDIBLE
+	message_muffled = "makes a muffled yap!"
+	is_animal = TRUE
+	show_runechat = FALSE
+/mob/living/carbon/human/verb/yip()
+	set name = "Yap"
+	set category = "Noises"
+	emote("yap", intentional = TRUE)
+
 /datum/emote/living/gulp
 	key = "gulp"
 	key_third_person = "gulps"
