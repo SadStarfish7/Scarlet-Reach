@@ -1885,4 +1885,70 @@
     else
         to_chat(L, span_warning("Nothing happens."))
 
+/*New emotes*/
+/datum/emote/living/yip
+	key = "yip"
+	key_third_person = "yips"
+	message = "yips!"
+	emote_type = EMOTE_AUDIBLE
+	message_muffled = "makes a muffled yip!"
+	is_animal = TRUE
+	show_runechat = FALSE
+/mob/living/carbon/human/verb/yip()
+	set name = "Yip"
+	set category = "Noises"
+	emote("yip", intentional = TRUE)
+
+/datum/emote/living/gulp
+	key = "gulp"
+	key_third_person = "gulps"
+	message = "gulps nervously."
+	emote_type = EMOTE_AUDIBLE
+	show_runechat = TRUE
+
+/mob/living/carbon/human/verb/gulp()
+	set name = "Gulp"
+	set category = "Noises"
+
+	emote("gulp", intentional = TRUE)
+
+/datum/emote/living/crack
+	key = "crack"
+	key_third_person = "cracks"
+	message = "cracks their knuckles."
+	emote_type = EMOTE_AUDIBLE | EMOTE_VISIBLE
+	show_runechat = TRUE
+
+/mob/living/carbon/human/verb/crack()
+	set name = "Knuckles"
+	set category = "Noises"
+
+	emote("crack", intentional = TRUE)
+
+/datum/emote/living/salute
+	key = "salute"
+	key_third_person = "salutes"
+	message = "salutes!"
+	emote_type = EMOTE_AUDIBLE | EMOTE_VISIBLE
+	show_runechat = TRUE
+
+/mob/living/carbon/human/verb/salute()
+	set name = "Salute"
+	set category = "Noises"
+
+	emote("salute", intentional = TRUE)
+
+/datum/emote/living/sniff
+	key = "sniff"
+	key_third_person = "sniffs"
+	message = "sniffs."
+	emote_type = EMOTE_AUDIBLE
+	show_runechat = TRUE
+
+/mob/living/carbon/human/verb/sniff()
+	set name = "Sniff"
+	set category = "Noises"
+
+	emote("sniff", intentional = TRUE)
+
     return TRUE
