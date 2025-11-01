@@ -16,6 +16,7 @@
 	var/shifted_speed_increase = 1 // this is applied as a NEGATIVE multiplicative_slowdown, so 1.25 would be a 25% speed increase
 
 	var/revert_on_death = TRUE
+	var/knockout_on_death = 0 // we will apply this value (as deciseconds) to our host mob as a knockout effect when punted out of the form
 	var/die_with_shapeshifted_form = TRUE
 	var/convert_damage = TRUE //If you want to convert the caster's health to the shift, and vice versa.
 	var/convert_damage_type = BRUTE //Since simplemobs don't have advanced damagetypes, what to convert damage back into.

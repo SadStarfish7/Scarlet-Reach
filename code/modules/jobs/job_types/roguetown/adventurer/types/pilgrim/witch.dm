@@ -116,17 +116,17 @@
 			ADD_TRAIT(H, TRAIT_HERESIARCH, TRAIT_GENERIC)
 
 /obj/effect/proc_holder/spell/targeted/shapeshift/crow/witch
-	die_with_shapeshifted_form = TRUE
-	convert_damage = TRUE
+	knockout_on_death = 15 SECONDS
 	shifted_speed_increase = 1.15
 	show_true_name = FALSE
+	die_with_shapeshifted_form = FALSE
 
 /obj/effect/proc_holder/spell/targeted/shapeshift/bat/witch
 	overlay_state = "bat_transform"
-	die_with_shapeshifted_form = TRUE
-	convert_damage = TRUE
+	knockout_on_death = 15 SECONDS
 	shifted_speed_increase = 1.15
 	show_true_name = FALSE
+	die_with_shapeshifted_form = FALSE
 
 /obj/effect/proc_holder/spell/targeted/shapeshift/cat
 	name = "Cat Form"
