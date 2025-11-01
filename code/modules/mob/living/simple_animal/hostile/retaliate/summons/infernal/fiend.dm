@@ -51,6 +51,9 @@
 	var/summon_cd = 0
 	inherent_spells = list(/obj/effect/proc_holder/spell/self/call_infernals)
 
+/mob/living/simple_animal/hostile/retaliate/rogue/infernal/fiend/Initialize()
+	. = ..()
+	ADD_TRAIT(src, TRAIT_SILVER_WEAK, TRAIT_GENERIC)
 
 /mob/living/simple_animal/hostile/retaliate/rogue/infernal/fiend/death(gibbed)
 	..()
