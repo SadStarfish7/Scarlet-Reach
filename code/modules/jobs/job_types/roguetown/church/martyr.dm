@@ -433,7 +433,7 @@
 	)
 	allowed_patrons = ALL_DIVINE_PATRONS
 	outfit = /datum/outfit/job/roguetown/martyr
-	min_pq = 10 //Cus it's a Martyr of the Ten. Get it.
+	min_pq =  14
 	max_pq = null
 	round_contrib_points = 4
 	total_positions = 1
@@ -468,14 +468,6 @@
 	job_subclasses = list(
 		/datum/advclass/martyr
 	)
-
-/datum/job/roguetown/martyr/after_spawn(mob/living/L, mob/M, latejoin = TRUE)
-	..()
-	if(ishuman(L))
-		var/mob/living/carbon/human/H = L
-		H.advsetup = 1
-		H.invisibility = INVISIBILITY_MAXIMUM
-		H.become_blind("advsetup")
 
 /datum/advclass/martyr
 	name = "Martyr"
