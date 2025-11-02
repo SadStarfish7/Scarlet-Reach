@@ -119,11 +119,6 @@
 	cost = 10
 	contains = list(/obj/item/rogueweapon/huntingknife/scissors,)
 
-/datum/supply_pack/rogue/tools/handsaw
-	name = "Handsaw"
-	cost = 10
-	contains = list(/obj/item/rogueweapon/handsaw = 1,)
-
 /datum/supply_pack/rogue/tools/chisel
 	name = "Chisel"
 	cost = 10
@@ -191,6 +186,11 @@
 	name = "Hammer"
 	cost = 35
 	contains = list(/obj/item/rogueweapon/hammer/iron)
+
+/datum/supply_pack/rogue/tools/tongs
+	name = "Tongs"
+	cost = 35
+	contains = list(/obj/item/rogueweapon/tongs)
 
 /datum/supply_pack/rogue/tools/fryingpan
 	name = "Frying Pan"
