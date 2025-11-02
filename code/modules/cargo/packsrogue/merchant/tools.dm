@@ -109,6 +109,16 @@
 	cost = 15
 	contains = /obj/item/bodypart/r_leg/prosthetic
 
+/datum/supply_pack/rogue/tools/huntingknife
+	name = "Hunting Knife"
+	cost = 10
+	contains = list(/obj/item/rogueweapon/huntingknife,)
+
+/datum/supply_pack/rogue/tools/ironscissors
+	name = "Iron Scissors"
+	cost = 10
+	contains = list(/obj/item/rogueweapon/huntingknife/scissors,)
+
 /datum/supply_pack/rogue/tools/hoe
 	name = "Hoe"
 	cost = 10
