@@ -14,6 +14,7 @@
   --line-height: 170%;
   --color-scrollbar-thumb: #7b5353;
 
+
   /* Semantic colors */ 
   --color-label: #897472;
 
@@ -29,8 +30,7 @@
   .TitleBar {
     background-image: url('../assets/azure_default/topbar_red.svg');
     background-repeat: repeat-x;
-
-    padding-left: 64px;
+    background-size: 64px;
     background-color: #000000;
     box-shadow: none;
 
@@ -90,5 +90,30 @@
   .Divider {
     border-color: #7b5353;
   }
+  
+  a:link {
+    color: #892a2b;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+  
+  a:visited {
+    color: #e19d9e;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+  
+  a:hover {
+    color: #c94f51;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+  
+  a:active {
+    color: #c94f51;
+    background-color: transparent;
+    text-decoration: underline;
+  }
 
 }
+
