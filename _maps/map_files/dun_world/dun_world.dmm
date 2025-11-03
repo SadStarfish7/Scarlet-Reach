@@ -28718,6 +28718,7 @@
 /area/rogue/indoors/town/garrison)
 "hWA" = (
 /obj/machinery/light/rogue/torchholder/c,
+/obj/structure/flora/roguegrass,
 /turf/open/floor/rogue/grass,
 /area/rogue/outdoors/exposed/town/keep)
 "hWN" = (
@@ -32907,9 +32908,6 @@
 	},
 /turf/open/floor/rogue/carpet/lord/center,
 /area/rogue/under/cave/licharena)
-"jcY" = (
-/turf/open/floor/rogue/naturalstone,
-/area/rogue/indoors/town)
 "jda" = (
 /obj/structure/bookcase/random/archive,
 /turf/open/floor/rogue/ruinedwood/chevron,
@@ -81368,10 +81366,6 @@
 /obj/machinery/light/rogue/wallfire/candle,
 /turf/open/transparent/openspace,
 /area/rogue/indoors/town)
-"wsu" = (
-/obj/structure/flora/ausbushes/ywflowers,
-/turf/open/floor/rogue/grass,
-/area/rogue/outdoors/exposed/town/keep)
 "wsv" = (
 /mob/living/carbon/human/species/goblin/npc/ambush,
 /turf/open/floor/rogue/twig,
@@ -195460,7 +195454,7 @@ fAL
 xSV
 ylh
 ylh
-ylh
+urZ
 ylh
 ylh
 urZ
@@ -196363,7 +196357,7 @@ xSV
 mMx
 mMx
 mMx
-ylh
+urZ
 ylh
 ylh
 ylh
@@ -196813,7 +196807,7 @@ iad
 xAN
 ylh
 mMx
-ylh
+urZ
 fAL
 opX
 opX
@@ -197715,7 +197709,7 @@ opX
 opX
 opX
 xSV
-ylh
+urZ
 mMx
 ylh
 xAN
@@ -198621,7 +198615,7 @@ bNo
 mMx
 mMx
 mMx
-ylh
+urZ
 xAN
 dlD
 ogs
@@ -311162,13 +311156,13 @@ gyu
 gyu
 cDX
 hWA
-wsu
-rMf
+qer
+kAx
 vAw
 vAw
-rMf
+kAx
 izp
-rMf
+kAx
 phl
 phl
 phl
@@ -311619,7 +311613,7 @@ vAw
 vAw
 vAw
 vAw
-rMf
+kAx
 rMf
 phl
 jdu
@@ -312072,7 +312066,7 @@ vAw
 vAw
 vAw
 vAw
-rMf
+kAx
 kAi
 jdu
 phl
@@ -312501,17 +312495,17 @@ ebU
 ebU
 ebU
 aoe
-jcY
+aoe
 phl
 phl
 phl
-jcY
+aoe
+quW
 sNZ
 sNZ
+quW
 sNZ
-sNZ
-sNZ
-sNZ
+quW
 sNZ
 ibp
 phl
@@ -312959,10 +312953,10 @@ aoe
 aoe
 aoe
 aoe
+quW
 sNZ
 sNZ
-sNZ
-sNZ
+quW
 sNZ
 sNZ
 sNZ
@@ -313416,7 +313410,7 @@ rZO
 rZO
 rZO
 sNZ
-sNZ
+quW
 sNZ
 pLh
 phl
